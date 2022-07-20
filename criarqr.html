@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <title>SVDB</title>
+
+    <style>
+
+.navbar-brand {
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-style: italic;
+}
+
+.nav-item{
+  font-family: Arial, Helvetica, sans-serif;
+font-size: medium;
+}
+
+body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-image: url(bom.webp);
+}
+
+.container{
+  max-width: 700px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.container .title::before{
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  background: orange;
+  bottom: 0;
+}
+
+.container form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box{
+  width: calc(100% /2 - 20px);
+  margin-bottom: 15px;
+}
+
+.user-details .input-box .details{
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0,3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+border-color: rgb(73, 146, 78);
+}
+
+form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+form .gender-details .category{
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin: 14px 0;
+}
+
+.gender-details .category label{
+display: flex;
+align-items: center;
+}
+
+.gender-details .category .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0,3s ease;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two{
+border-color: #d9d9d9;
+background: rgb(73, 146, 78);
+}
+
+.input-r{
+  display: none;
+}
+
+form .button{
+  height: 45px;
+  margin: 45px 0;
+}
+
+form .button input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  background: rgb(73, 146, 78);
+}
+form .button input:hover{
+  background: #fff;
+  color: rgb(73, 146, 78);
+  border: 2px solid rgb(73, 146, 78);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    </style>
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgb(73, 146, 78)">
+        <div class="container-fluid" id="nav-container">
+          <a href="file:///C:/Users/tiago/Desktop/Pagina_Projete2022/index.html#"> <img src="bull-295231_960_720.png" alt="" width="50" height="40"></a>
+          <a class="navbar-brand" style="color: white;">ﾠVerificação de Dados Bovinos</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="file:///C:/Users/tiago/Desktop/Pagina_Projete2022/index.html#" style="color: white;">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white;">Escanear QR Code</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white;">Criar QR Code</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white;">Ajuda</a>
+              </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white;">Contato</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="title">Cadastro</div>
+        <form action="#">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Brinco</span>
+              <input type="number" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Raça</span>
+              <input type="text" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Idade (Meses)</span>
+              <input type="text" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Ração Ingerida</span>
+              <input type="text" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Vacinas Tomadas</span>
+              <input type="text" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Massa (Kg)</span>
+              <input type="text" required>
+            </div>
+          </div>
+          <div class="gender-details">
+            <input type="radio" name="gender" class="input-r" id="dot-1">
+            <input type="radio" name="gender" class="input-r" id="dot-2">
+            <span class="gender-title">Sexo</span>
+            <div class="category">
+              <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="gender">Macho</span>
+              </label>
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span class="gender">Fêmea</span>
+              </label>
+            </div>
+          </div>
+          <div class="button">
+            <input type="submit" value="Salvar Informações">
+          </div>
+        </form>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>
