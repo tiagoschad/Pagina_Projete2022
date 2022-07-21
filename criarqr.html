@@ -126,7 +126,7 @@ background: rgb(73, 146, 78);
 
 form .button{
   height: 45px;
-  margin: 45px 0;
+  margin: 10px 0;
 }
 
 form .button input{
@@ -145,6 +145,29 @@ form .button input:hover{
   background: #fff;
   color: rgb(73, 146, 78);
   border: 2px solid rgb(73, 146, 78);
+}
+
+form .button2{
+  height: 45px;
+  margin: 10px 0;
+}
+
+form .button2 input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  background: orange;
+}
+form .button2 input:hover{
+  background: #fff;
+  color: orange;
+  border: 2px solid orange;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -171,7 +194,7 @@ input[type=number]::-webkit-inner-spin-button,
                 <a class="nav-link active" aria-current="page" href="file:///C:/Users/tiago/Desktop/Pagina_Projete2022/index.html#" style="color: white;">Início</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" style="color: white;">Escanear QR Code</a>
+                <a class="nav-link" href="file:///C:/Users/tiago/Desktop/Pagina_Projete2022/camera.html" style="color: white;">Escanear QR Code</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" style="color: white;">Criar QR Code</a>
@@ -232,8 +255,12 @@ input[type=number]::-webkit-inner-spin-button,
               </label>
             </div>
           </div>
+          <br>
           <div class="button">
             <input type="submit" value="Salvar Informações">
+          </div>
+          <div class="button2">
+            <input type="submit" value="Gerar QR Code">
           </div>
         </form>
       </div>
