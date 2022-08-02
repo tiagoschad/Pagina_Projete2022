@@ -1,4 +1,3 @@
-// Escanear QR Code
 var video = document.querySelector('video')
 
 navigator.mediaDevices.getUserMedia({video:true})
@@ -8,7 +7,4 @@ navigator.mediaDevices.getUserMedia({video:true})
 })
 .catch(error => {
     console.log(error)
-})
-video.addEventListener('scan', content =>{
-    console.log(content)
 })
