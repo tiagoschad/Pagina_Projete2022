@@ -1,7 +1,7 @@
 const firebaseConfig = {
     apiKey: "AIzaSyA2MR-EIhfrBldyxsg5Hfjl09Iwbof9cyk",
     authDomain: "projetesvdb.firebaseapp.com",
-    databaseUrl: "https://projetesvdb-default-rtdb.firebaseio.com",
+    databaseURL: "https://projetesvdb-default-rtdb.firebaseio.com",
     projectId: "projetesvdb",
     storageBucket: "projetesvdb.appspot.com",
     messagingSenderId: "214663302807",
@@ -11,7 +11,7 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 
-db - firebase.database()
+db = firebase.database()
 
 function Salvar()
 {
@@ -24,6 +24,42 @@ function Salvar()
         {
             document.getElementById('buttondois').disabled = false
             document.getElementById('buttonum').disabled = true
+            
+            db.ref('Brinco').set({
+                valor: document.getElementById("brinco").value
+            })
+
+            db.ref('Raça').set({
+                valor: document.getElementById("raca").value
+            })
+
+            db.ref('Idade').set({
+                valor: document.getElementById("idade").value
+            })
+
+            db.ref('Ração').set({
+                valor: document.getElementById("racao").value
+            })
+
+            db.ref('Vacinas').set({
+                valor: document.getElementById("vacina").value
+            })
+
+            db.ref('Massa').set({
+                valor: document.getElementById("massa").value
+            })
+            
+            if((document.getElementById("dot-1").checked)){
+            db.ref('Sexo').set({
+                valor: 'Macho'
+                })
+            }
+            else{
+                db.ref('Sexo').set({
+                    valor: 'Fêmea'
+                })
+            }
+
         }
             else
             {
