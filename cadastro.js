@@ -25,41 +25,50 @@ function Salvar()
             document.getElementById('buttondois').disabled = false
             document.getElementById('buttonum').disabled = true
             
-            db.ref('Brinco').set({
-                valor: document.getElementById("brinco").value
-            })
-
-            db.ref('Raça').set({
-                valor: document.getElementById("raca").value
-            })
-
-            db.ref('Idade').set({
-                valor: document.getElementById("idade").value
-            })
-
-            db.ref('Ração').set({
-                valor: document.getElementById("racao").value
-            })
-
-            db.ref('Vacinas').set({
-                valor: document.getElementById("vacina").value
-            })
-
-            db.ref('Massa').set({
-                valor: document.getElementById("massa").value
-            })
-            
             if((document.getElementById("dot-1").checked)){
-            db.ref('Sexo').set({
-                valor: 'Macho'
-                })
+            json_dados = {
+                "Brinco": document.getElementById("brinco").value,
+                "Raça": document.getElementById("raca").value,
+                "Idade": document.getElementById("idade").value,
+                "Ração": document.getElementById("racao").value,
+                "Vacinas": document.getElementById("vacina").value,
+                "Massa": document.getElementById("massa").value,
+                "Sexo": "Macho"
             }
-            else{
-                db.ref('Sexo').set({
-                    valor: 'Fêmea'
+
+            try{
+                db.ref("Dados").push({
+                    dados: json_dados
                 })
             }
 
+            catch(error){
+                alert("Não foi possível salvar os dados")
+            }
+            }
+
+            else
+            {
+                json_dados = {
+                    "Brinco": document.getElementById("brinco").value,
+                    "Raça": document.getElementById("raca").value,
+                    "Idade": document.getElementById("idade").value,
+                    "Ração": document.getElementById("racao").value,
+                    "Vacinas": document.getElementById("vacina").value,
+                    "Massa": document.getElementById("massa").value,
+                    "Sexo": "Fêmea"
+                }
+    
+                try{
+                    db.ref("Dados").push({
+                        dados: json_dados
+                    })
+                }
+    
+                catch(error){
+                    alert("Não foi possível salvar os dados")
+                }
+            }
         }
             else
             {
