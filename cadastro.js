@@ -75,7 +75,3 @@ function Salvar()
                 alert("Selecione o sexo do animal")
             }
 }
-
-function GerarQRCode(){
-    window.location.href = "file:///C:/Users/tiago/Desktop/Pagina_Projete2022/qrcode.html"
-}
