@@ -95,6 +95,7 @@ font-size: medium;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  background-color: white;
 }
 
 .content-table thead tr {
@@ -136,6 +137,39 @@ font-style: italic;
 font-size: medium;
 }
 
+.btn-warning{
+  margin-left: 200px;
+  margin-top: -200px;
+  width: 200px;
+  border-radius: 5px;
+  color: white;
+  position: fixed;
+}
+
+.btn-warning:hover{
+color: white;
+}
+
+.btn-primary{
+  margin-top: -200px;
+  margin-left: 200px;
+  width: 200px;
+  background-color: rgb(73, 146, 78);
+  position: fixed;
+}
+
+.btn-primary:hover{
+  background-color: rgb(73, 146, 78);
+}
+
+.btn-danger{
+  margin-top: -200px;
+  margin-left: 400px;
+  position: fixed;
+  width: 200px;
+  border-radius: 5px;
+}
+
 </style>
 </head>
 
@@ -154,10 +188,10 @@ font-size: medium;
                 <a class="nav-link active" aria-current="page" href="file:///C:/Users/tiago/Desktop/Pagina_Projete2022/index.html#" style="color: white;">Início</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="file:///C:/Users/tiago/Desktop/Pagina_Projete2022/camera.html" style="color: white;">Buscar Brinco</a>
+                <a class="nav-link" href="file:///C:/Users/tiago/Desktop/Pagina_Projete2022/pesquisa.html" style="color: white;">Buscar Brinco</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="file:///C:/Users/tiago/Desktop/Pagina_Projete2022/criarqr.html" style="color: white;">Cadastrar Animal</a>
+                <a class="nav-link" href="file:///C:/Users/tiago/Desktop/Pagina_Projete2022/cadastro.html" style="color: white;">Cadastrar Animal</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" style="color: white;">Ajuda</a>
@@ -177,8 +211,7 @@ font-size: medium;
 <div class="box">
 	<input type="number" name="" placeholder="Digite o numero do brinco do animal para continuar..." id="nbrinco">
         <i class="fa fa-search" aria-hidden="true"></i>
-</div>
-
+      </div>
 <button type="button" class="btn btn-success" onclick="Buscar()">Continuar</button>
 </div>
 
@@ -217,6 +250,9 @@ font-size: medium;
     </tr>
   </tbody>
 </table>
+<button type="button" class="btn btn-warning" onclick="Editar()" id="btned">Editar</button>
+<button type="button" class="btn btn-primary" style="display: none;" id="btnse" onclick="Salvar()">Salvar Edições</button>
+<button type="button" class="btn btn-danger" style="display: none;" id="btnc" onclick="Cancelar()">Cancelar</button>
 </div>
 <script src="pesquisa.js"></script>
 

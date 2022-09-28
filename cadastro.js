@@ -17,13 +17,12 @@ function Salvar()
 {
     if ((document.getElementById("brinco").value == '') || (document.getElementById("raca").value == '') || (document.getElementById("idade").value == '') || (document.getElementById("racao").value == '') || (document.getElementById("vacina").value == '') || (document.getElementById("massa").value == ''))
     {
-        document.getElementById('buttondois').disabled = true
         alert("Preencha todos os dados para continuar")
     }
         else if ((document.getElementById("dot-1").checked) || (document.getElementById("dot-2").checked))
         {
-            document.getElementById('buttondois').disabled = false
             document.getElementById('buttonum').disabled = true
+            alert("Cadastro feito com sucesso!")
             
             if((document.getElementById("dot-1").checked)){
             json_dados = {

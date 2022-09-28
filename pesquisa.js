@@ -54,3 +54,24 @@ function Buscar() {
     }
 }
 }
+
+function Editar(){
+    document.getElementById("btnse").style.display = "block"
+    document.getElementById("btnc").style.display = "block"
+    document.getElementById("btned").style.display = "none"
+
+}
+
+function Salvar(){
+    document.getElementById("btnse").style.display = "none"
+    document.getElementById("btnc").style.display = "none"
+    document.getElementById("btned").style.display = "block"
+
+}
+
+function Cancelar(){
+    document.getElementById("btnse").style.display = "none"
+    document.getElementById("btnc").style.display = "none"
+    document.getElementById("btned").style.display = "block"
+
+}
