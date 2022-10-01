@@ -81,6 +81,8 @@ font-size: medium;
     width: 120px;
     height: 50px;
     font-size: 18px;
+    margin-top: -50px;
+    margin-left: 420px;
 }
 
 * {
@@ -170,6 +172,14 @@ color: white;
   border-radius: 5px;
 }
 
+.btn-voltar{
+  margin-top: -660px;
+  margin-left: -350px;
+  background-color: transparent;
+  border-color: transparent;
+  position: fixed;
+}
+
 </style>
 </head>
 
@@ -209,8 +219,8 @@ color: white;
 <h1>Acompanhar Dados</h1>
 
 <div class="box">
-	<input type="number" name="" placeholder="Digite o numero do brinco do animal para continuar..." id="nbrinco">
-        <i class="fa fa-search" aria-hidden="true"></i>
+  <i class="fa fa-search" aria-hidden="true"></i>
+	<input type="number" name="" placeholder="Digite o número do brinco para continuar..." id="nbrinco">
       </div>
 <button type="button" class="btn btn-success" onclick="Buscar()">Continuar</button>
 </div>
@@ -253,6 +263,8 @@ color: white;
 <button type="button" class="btn btn-warning" onclick="Editar()" id="btned">Editar</button>
 <button type="button" class="btn btn-primary" style="display: none;" id="btnse" onclick="Salvar()">Salvar Edições</button>
 <button type="button" class="btn btn-danger" style="display: none;" id="btnc" onclick="Cancelar()">Cancelar</button>
+
+<a class="btn-voltar" href="file:///C:/Users/tiago/Desktop/Pagina_Projete2022/pesquisa.html"><img src="seta.png" alt="" width="80" height="80"></a>
 </div>
 <script src="pesquisa.js"></script>
 
