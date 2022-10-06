@@ -13,6 +13,12 @@ firebase.initializeApp(firebaseConfig)
 
 db = firebase.database()
 
+var data = new Date();
+var dia = String(data.getDate()).padStart(2, '0');
+var mes = String(data.getMonth() + 1).padStart(2, '0');
+var ano = data.getFullYear();
+dataAtual = dia + '/' + mes + '/' + ano;
+
 function Salvar()
 {
     if ((document.getElementById("brinco").value == '') || (document.getElementById("raca").value == '') || (document.getElementById("idade").value == '') || (document.getElementById("racao").value == '') || (document.getElementById("vacina").value == '') || (document.getElementById("massa").value == ''))
@@ -32,7 +38,8 @@ function Salvar()
                 "Ração": document.getElementById("racao").value,
                 "Vacinas": document.getElementById("vacina").value,
                 "Massa": document.getElementById("massa").value,
-                "Sexo": "Macho"
+                "Sexo": "Macho",
+                "Data": dataAtual
             }
 
             try{
@@ -55,7 +62,9 @@ function Salvar()
                     "Ração": document.getElementById("racao").value,
                     "Vacinas": document.getElementById("vacina").value,
                     "Massa": document.getElementById("massa").value,
-                    "Sexo": "Fêmea"
+                    "Sexo": "Fêmea",
+                    "Data": today.toDateString()
+
                 }
     
                 try{

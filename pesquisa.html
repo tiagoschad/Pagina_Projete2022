@@ -173,10 +173,22 @@ color: white;
 }
 
 .btn-voltar{
-  margin-top: -660px;
-  margin-left: -350px;
+  margin-top: -310px;
+  margin-left: -740px;
   background-color: transparent;
   border-color: transparent;
+  position: fixed;
+}
+
+.dados-padrao{
+  margin-top: -340px;
+  margin-left: -700px;
+  position: fixed;
+}
+
+.dados-massa{
+  margin-top: -340px;
+  margin-left: -100px;
   position: fixed;
 }
 
@@ -226,6 +238,10 @@ color: white;
 </div>
 
 <div id="tabela" style="display:none">
+
+  <a class="btn-voltar" href="file:///C:/Users/tiago/Desktop/Pagina_Projete2022/pesquisa.html"><img src="seta.png" alt="" width="80" height="80"></a>
+
+  <div class="dados-padrao">
 <table class="content-table">
   <thead>
     <tr>
@@ -263,9 +279,49 @@ color: white;
 <button type="button" class="btn btn-warning" onclick="Editar()" id="btned">Editar</button>
 <button type="button" class="btn btn-primary" style="display: none;" id="btnse" onclick="Salvar()">Salvar Edições</button>
 <button type="button" class="btn btn-danger" style="display: none;" id="btnc" onclick="Cancelar()">Cancelar</button>
-
-<a class="btn-voltar" href="file:///C:/Users/tiago/Desktop/Pagina_Projete2022/pesquisa.html"><img src="seta.png" alt="" width="80" height="80"></a>
 </div>
+
+<div class="dados-massa">
+<table class="content-table">
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Massa (Kg)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="text" id="digita_data" style="display:none"></input><label id="data"></label></td>
+      <td><input type="text" id="digita_massa" style="display:none"></input><label id="massa"></label></td>
+    </tr>
+    <tr>
+      <td><input type="text" id="digita_data1" style="display:none"></input><label id="data1"></label></td>
+      <td><input type="text" id="digita_massa1" style="display:none"></input><label id="massa1"></label></td>
+    </tr>
+    <tr>
+      <td><input type="text" id="digita_data2" style="display:none"></input><label id="data2"></label></td>
+      <td><input type="text" id="digita_massa2" style="display:none"></input><label id="massa2"></label></td>
+    </tr>
+    <tr>
+      <td><input type="text" id="digita_data3" style="display:none"></input><label id="data3"></label></td>
+      <td><input type="text" id="digita_massa3" style="display:none"></input><label id="massa3"></label></td>
+    </tr>
+    <tr>
+      <td><input type="text" id="digita_data4" style="display:none"></input><label id="data4"></label></td>
+      <td><input type="text" id="digita_massa4" style="display:none"></input><label id="massa4"></label></td>
+    </tr>
+    <tr>
+      <td><input type="text" id="digita_data5" style="display:none"></input><label id="data5"></label></td>
+      <td><input type="text" id="digita_massa5" style="display:none"></input><label id="massa5"></label></td>
+    </tr>
+  </tbody>
+</table>
+<button type="button" class="btn btn-warning" onclick="EditarMassa()" id="btned2">Editar</button>
+<button type="button" class="btn btn-primary" style="display: none;" id="btnse2" onclick="SalvarMassa()">Salvar Edições</button>
+<button type="button" class="btn btn-danger" style="display: none;" id="btnc2" onclick="CancelarMassa()">Cancelar</button>
+</div>
+</div>
+
 <script src="pesquisa.js"></script>
 
 </body>
